@@ -196,6 +196,122 @@ section li {
     transform: translateX(6px);
 }
 
+/* =====================
+   手机端适配（主界面）
+   ===================== */
+@media (max-width: 768px) {
+
+    /* Hero 区整体改为纵向 */
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .hero-logo {
+        width: 220px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 240px;
+        margin: 24px 0 0;
+        -webkit-mask-image: none;
+        mask-image: none;
+        border-radius: 2px;
+    }
+
+    /* 内容区 padding 缩小 */
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .jp-sub {
+        margin-top: -16px;
+        margin-bottom: 24px;
+    }
+}
+<style>
+    （你现在所有 CSS）
+
+    👇👇👇 在这里粘贴下面代码 👇👇👇
+</style>
+/* =========================
+   手机端优化（屏幕宽度 ≤ 768px）
+========================= */
+@media (max-width: 768px) {
+
+    /* 整体留白收紧 */
+    header,
+    main {
+        padding: 48px 24px;
+    }
+
+    /* 标题字距稍微收紧 */
+    header h1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    /* 时间轴改为“无轴展示” */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    /* 每件作品之间更清晰 */
+    .work-item {
+        margin-bottom: 64px;
+    }
+
+    /* 主图宽度自适应 */
+    .work-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 24px 0;
+    }
+
+    /* 缩略图变小 + 可换行 */
+    .work-thumbnails {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .work-thumbnails img {
+        width: 80px;
+    }
+
+    /* 返回按钮靠左更自然 */
+    .back-link {
+        margin: 24px;
+        font-size: 13px;
+    }
+
+}
 
 
 </style>
