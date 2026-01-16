@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ご紹介している作品｜豊陽株式会社</title>
+
+    <style>
+    body {
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #222;
+    }
+
+    header {
+        padding: 80px 120px 40px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .jp-sub {
+        font-size: 13px;
+        opacity: 0.5;
+    }
+
+    main {
+        padding: 80px 120px;
+    }
+
+    .work-item {
+        margin-bottom: 80px;
+        
+    }
+
+    .work-item h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    .work-item p {
+        line-height: 1.9;
+        color: #444;
+        max-width: 720px;
+    }
+
+    .work-note {
+        font-size: 13px;
+        opacity: 0.5;
+        margin-top: 12px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin: 40px 0 0 80px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #555;
+        text-decoration: none;
+        opacity: 0.7;
+    }
+
+    .back-link:hover {
+        opacity: 1;
+    }
+    /* 时间轴整体 */
+.timeline {
+    position: relative;
+    padding-left: 140px;
+}
+
+/* 竖线 */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ddd;
+}
+
+/* 每个作品 */
+.work-item {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+/* 时间点 */
+.dot {
+    position: absolute;
+    left: -52px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+}
+/* 作品图片 */
+.work-image {
+    display: block;
+    max-width: 100%;
+    margin: 24px 0 20px;
+    border-radius: 2px;
+}
+.work-image {
+    width: 100%;
+    max-width: 720px;
+    display: block;
+    margin: 32px 0;
+    transition: transform 0.4s ease;
+}
+
+.work-image:hover {
+    transform: scale(1.04);
+}
+.work-gallery {
+    margin: 32px 0;
+}
+
+.work-gallery .work-image {
+    margin-bottom: 24px;
+}
+
+.work-gallery .work-image:last-child {
+    margin-bottom: 0;
+}
+.work-thumbnails {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.work-thumbnails img {
+    width: 120px;          /* 控制缩略图大小 */
+    height: auto;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.work-thumbnails img:hover {
+    opacity: 1;
+}
+
+/* =====================
+   手机端适配
+   ===================== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 20px 24px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    /* 取消时间轴 */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    .work-item {
+        margin-bottom: 64px;
+    }
+
+    .work-item h2 {
+        font-size: 18px;
+    }
+
+    /* 图片保持满宽 */
+    .work-image {
+        margin: 20px 0;
+    }
+
+    /* 缩略图：自动换行 */
+    .work-thumbnails {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .work-thumbnails img {
+        width: 30%;
+    }
+
+    /* 返回按钮更靠近内容 */
+    .back-link {
+        margin: 20px;
+        font-size: 13px;
+    }
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+<a href="index.html" class="back-link">← トップへ</a>
+
+<header>
+    <h1>ご紹介している作品</h1>
+    <p class="jp-sub">現在お取り扱い、またはご縁のあった品々</p>
+</header>
+
+<main>
+
+   <main>
+
+    <div class="work-item">
+        <span class="dot"></span>
+
+        <h2>作品名（仮）</h2>
+
+        <!-- 主图 -->
+    <img src="images/4.jpg" class="work-image" alt="作品主图">
+
+    <!-- 缩略图组（新增的部分） -->
+    <div class="work-thumbnails">
+        <img src="images/401.jpg" alt="">
+        <img src="images/402.jpg" alt="">
+        <img src="images/403.jpg" alt="">
+    </div>
+            作品についての簡単な説明文を这里记载。
+        </p>
+        <p class="work-note">
+            掲載日：2026年◯月
+        </p>
+    </div>
+ <div class="work-item">
+        <span class="dot"></span>
+
+        <h2>作品名（仮）</h2>
+
+        <img src="images/5.jpg" class="work-image" alt="作品图片">
+
+        <p>
+            作品についての簡単な説明文を这里记载。
+        </p>
+        <p class="work-note">
+            掲載日：2026年◯月
+        </p>
+    </div>
+     <div class="work-item">
+        <span class="dot"></span>
+
+        <h2>作品名（仮）</h2>
+
+        <img src="images/6.jpg" class="work-image" alt="作品图片">
+
+        <p>
+            作品についての簡単な説明文を这里记载。
+        </p>
+        <p class="work-note">
+            掲載日：2026年◯月
+        </p>
+    </div>
+     <div class="work-item">
+        <span class="dot"></span>
+
+        <h2>作品名（仮）</h2>
+
+        <img src="images/7.jpg" class="work-image" alt="作品图片">
+
+        <p>
+            作品についての簡単な説明文を这里记载。
+        </p>
+        <p class="work-note">
+            掲載日：2026年◯月
+        </p>
+    </div>
+</main>
+
+</body>
+</html>
+
