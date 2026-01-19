@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>豊陽株式会社｜艺术品与古董拍卖</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      height: 70vh;
+      min-height: 420px;
+      background-image: url("images/1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px 24px 40px;
+      color: #fff;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      letter-spacing: 4px;
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      margin: 0;
+      opacity: 0.85;
+    }
+
+    /* ===== Section ===== */
+    section {
+      background-color: #fff;
+      padding: 56px 24px;
+      border-bottom: 1px solid #eee;
+    }
+
+    section h2 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin: 0 0 12px;
+    }
+
+    .jp-sub {
+      font-size: 12px;
+      opacity: 0.5;
+      margin-bottom: 28px;
+    }
+
+    section p {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /* ===== Works link ===== */
+    .works {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .works section {
+      background-color: #fafafa;
+    }
+
+    .works h2::after {
+      content: " →";
+      font-size: 14px;
+      opacity: 0.4;
+    }
+
+    /* ===== Footer spacing ===== */
+    .footer {
+      padding-bottom: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="images/3.png" alt="豊陽株式会社 Logo" class="hero-logo">
+      <h1>豊陽株式会社</h1>
+      <p>专注高端艺术品 · 传承与价值的发现者</p>
+      <p style="font-size:12px; opacity:0.6; margin-top:6px;">
+        高級美術品・骨董品オークション
+      </p>
+    </div>
+  </header>
+
+  <!-- Works -->
+  <a href="works.html" class="works">
+    <section>
+      <h2>ご紹介している作品</h2>
+      <p class="jp-sub">我们正在介绍的作品</p>
+      <p>
+        我们会不定期更新近期所经手、所关注的艺术品与骨董。
+        数量不多，但每一件都经过认真对待。
+      </p>
+    </section>
+  </a>
+
+  <!-- About -->
+  <section>
+    <h2>私たちについて</h2>
+    <p class="jp-sub">关于我们</p>
+    <p>
+      私たちは、美術品や骨董品が持つ时间的厚重与静谧之美，
+      日复一日地与之相对。
+      <br><br>
+      不追求华丽的辞藻，而以诚实的眼光，
+      珍视作品及其背后的故事，
+      将它们谨慎地传递至下一个时代。
+    </p>
+  </section>
+
+  <!-- Service -->
+  <section>
+    <h2>お手伝いできること</h2>
+    <p class="jp-sub">我们能为您做的事</p>
+    <p>
+      从作品咨询、调查、展示到公开空间的构建，
+      我们珍惜每一段缘分，
+      以不勉强的方式陪伴您完成。
+      <br><br>
+      虽是一家小公司，
+      但正因如此，更能保持灵活与细致。
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="footer">
+    <h2>お問い合わせ</h2>
+    <p class="jp-sub">联系方式</p>
+    <p>
+      公司名称：豊陽株式会社<br>
+      邮箱：houyou6161@gmail.com<br>
+      电话：077-526-6018<br>
+      地址：〒520-0113<br>
+      滋賀県大津市坂本六丁目18番35号
+    </p>
+  </section>
+
+</body>
+</html>

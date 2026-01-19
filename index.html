@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>豊陽株式会社｜艺术品与古董拍卖</title>
+<link rel="alternate" href="mobile.html" media="only screen and (max-width: 768px)">
+
+    <script>
+(function () {
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    window.location.href = "mobile.html";
+  }
+})();
+</script>
 
     <style>
     body {
@@ -172,9 +181,16 @@ section li {
 }
 
 .section-works {
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
 }
+
+.section-works:hover {
+    background-color: #fafafa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
 
 .section-works:hover {
     background-color: #fafafa;
@@ -183,9 +199,11 @@ section li {
 .section-works h2::after {
     content: " →";
     font-size: 16px;
-    opacity: 0;
+    opacity: 0.35;          /* 默认就能看到 */
+    margin-left: 6px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 
 .section-works:hover h2::after {
     opacity: 0.4;
@@ -273,10 +291,34 @@ section p {
 }
 
 
+
 }
 
+/* =====================
+   PC 端滚动层次感（轻微）
+   ===================== */
 
+@media (min-width: 769px) {
 
+section {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: sectionFadeUp 0.8s ease forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+
+@keyframes sectionFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+}
 
 
 
@@ -308,6 +350,10 @@ section p {
             我们会不定期更新近期所经手、所关注的艺术品与骨董。
             数量不多，但每一件都经过认真对待。
         </p>
+        <p style="font-size:13px; opacity:0.5; margin-top:12px;">
+    点击查看作品 →
+</p>
+
     </section>
 </a>
 
@@ -356,7 +402,7 @@ section p {
 </section>
 
 
-
+<a href="mobile.html">手机端查看</a>
 
 </body>
 </html>

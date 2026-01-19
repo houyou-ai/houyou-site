@@ -34,14 +34,16 @@
     }
 
     .work-item {
-        margin-bottom: 80px;
+        margin-bottom: 120px;
         
     }
 
     .work-item h2 {
         font-size: 20px;
-        letter-spacing: 2px;
-        margin-bottom: 16px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        padding-left: 12px;
+    border-left: 3px solid #bbb;
     }
 
     .work-item p {
@@ -89,7 +91,9 @@
 /* 每个作品 */
 .work-item {
     position: relative;
-    margin-bottom: 100px;
+   margin-bottom: 140px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #eee;
 }
 
 /* 时间点 */
@@ -118,7 +122,7 @@
 }
 
 .work-image:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 .work-gallery {
     margin: 32px 0;
@@ -147,18 +151,26 @@
 .work-thumbnails img:hover {
     opacity: 1;
 }
+.work-image {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    background-color: #fff;
+}
 
-/* =====================
-   手机端适配
-   ===================== */
+
+
+
+/* =========================
+   手机端 · 展厅级作品展示（最终版）
+   ========================= */
+
 @media (max-width: 768px) {
+
+    body {
+        background-color: #f2f2f2;
+    }
 
     header {
         padding: 40px 20px 24px;
-    }
-
-    main {
-        padding: 40px 20px;
     }
 
     header h1 {
@@ -166,48 +178,72 @@
         letter-spacing: 4px;
     }
 
-    /* 取消时间轴 */
+    main {
+        padding: 40px 20px 48px;
+    }
+
+    /* 关闭时间轴 */
     .timeline {
         padding-left: 0;
     }
 
-    .timeline::before {
-        display: none;
-    }
-
+    .timeline::before,
     .dot {
         display: none;
     }
 
+    /* 每一件作品 = 展区 */
     .work-item {
-        margin-bottom: 64px;
+        background-color: #fff;
+        padding: 28px 20px 36px;
+        margin-bottom: 48px;
+        border-radius: 4px;
+        border-bottom: none;
     }
 
     .work-item h2 {
-        font-size: 18px;
+        font-size: 17px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+        padding-left: 10px;
+        border-left: 3px solid #bbb;
     }
 
-    /* 图片保持满宽 */
     .work-image {
-        margin: 20px 0;
+        width: 100%;
+        margin: 24px 0;
+        box-shadow: 0 16px 32px rgba(0,0,0,0.1);
     }
 
-    /* 缩略图：自动换行 */
     .work-thumbnails {
-        gap: 10px;
+        display: flex;
         flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
     }
 
     .work-thumbnails img {
         width: 30%;
+        opacity: 0.9;
     }
 
-    /* 返回按钮更靠近内容 */
+    .work-item p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .work-note {
+        font-size: 12px;
+        opacity: 0.45;
+        margin-top: 14px;
+    }
+
     .back-link {
         margin: 20px;
         font-size: 13px;
     }
 }
+
 
     </style>
     
@@ -222,9 +258,9 @@
     <p class="jp-sub">現在お取り扱い、またはご縁のあった品々</p>
 </header>
 
-<main>
 
-   <main>
+<main class="timeline">
+
 
     <div class="work-item">
         <span class="dot"></span>
@@ -240,6 +276,7 @@
         <img src="images/402.jpg" alt="">
         <img src="images/403.jpg" alt="">
     </div>
+    <p></p>
             作品についての簡単な説明文を这里记载。
         </p>
         <p class="work-note">
