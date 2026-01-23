@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>私たちについて｜豊陽株式会社</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+    }
+
+    /* ===== 顶部视觉区 ===== */
+    .hero {
+      position: relative;
+      height: 60vh;
+      background-image: url("images/401.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      padding-left: 120px;
+      color: #fff;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      letter-spacing: 8px;
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      font-size: 14px;
+      letter-spacing: 2px;
+      opacity: 0.85;
+    }
+
+    /* ===== 内容区 ===== */
+    main {
+      padding: 120px;
+      max-width: 1000px;
+    }
+
+    section {
+      margin-bottom: 120px;
+    }
+
+    h2 {
+      font-size: 24px;
+      letter-spacing: 4px;
+      margin-bottom: 32px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 2;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 2;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== 返回按钮 ===== */
+    .back-link {
+      display: inline-block;
+      margin-top: 120px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #222;
+      border-bottom: 1px solid #222;
+      padding-bottom: 4px;
+    }
+
+    /* ===== 手机端 ===== */
+    @media (max-width: 768px) {
+      .hero {
+        height: 45vh;
+      }
+
+      .hero-text {
+        padding-left: 24px;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+        letter-spacing: 6px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== 头部 ===== -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>私たちについて</h1>
+    <p>About Hofu Art</p>
+  </div>
+</section>
+
+<!-- ===== 内容 ===== -->
+<main>
+
+  <section>
+    <h2>豊陽株式会社とは</h2>
+    <p>
+      豊陽株式会社は、日本の伝統美術・古美術を中心に、
+      時代を超えて受け継がれてきた美の価値を
+      次世代へと継承することを目的としたアートカンパニーです。
+    </p>
+    <p>
+      箪笥、建具、小家具をはじめとする生活に根ざした工芸品を通じて、
+      日本文化の奥行きと静かな美意識を現代の空間へと繋ぎます。
+    </p>
+  </section>
+
+  <section>
+    <h2>事業内容</h2>
+    <ul>
+      <li>古美術・工芸品の売買</li>
+      <li>美術品オークション事業</li>
+      <li>コレクション形成のサポート</li>
+      <li>空間演出・コーディネートのご提案</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>私たちの理念</h2>
+    <p>
+      私たちは、単に美術品を取引するのではなく、
+      そこに宿る歴史、手仕事、そして時間の重なりを尊重します。
+    </p>
+    <p>
+      静かで力強い日本の美を、暮らしの中で感じていただけるよう、
+      誠実な眼と姿勢で作品と向き合い続けます。
+    </p>
+  </section>
+
+  <a href="index.html" class="back-link">← トップページへ戻る</a>
+
+</main>
+
+</body>
+</html>
