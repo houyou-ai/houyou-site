@@ -416,9 +416,19 @@ section:nth-of-type(even) {
     z-index: 10;
 }
 
+.contact-section {
+    position: relative;
+}
+.corner-map {
+    position: absolute;
+    right: 160px;
+    bottom: 130px;
 
+    width: 220px;      /* 比较克制、好看 */
+    opacity: 0.75;
 
-
+    pointer-events: none;
+}
 
 }
 
@@ -505,8 +515,13 @@ section:nth-of-type(even) {
         邮箱：houyou6161@gmail.com<br>
         电话：077-526-6018<br>
         地址：〒520-0113<br/>滋賀県大津市坂本六丁目18番35号
+
+        <img src="images/10.png" alt="手绘地图" class="corner-map">
+
     </p>
 </section>
+
+
 
 
 <a href="mobile.html">手机端查看</a>
