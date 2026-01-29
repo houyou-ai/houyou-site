@@ -56,86 +56,115 @@ header p {
 
 
 .hero {
+    position: relative;
+    min-height: 90vh;
+    background: #111;
     display: flex;
     align-items: center;
-    min-height: 500px;
-    padding-left: 80px;
-    padding-right: 0;
-
-background: linear-gradient(
-    to right,
-    #111 0%,
-    #111 55%,
-    rgba(17,17,17,0.95) 62%,
-    rgba(17,17,17,0.9) 68%
-);
-
-
-    width: 100%;
-overflow: hidden;
-
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* 防止两侧图片溢出 */
 }
 
-
-.hero-text {
-    max-width: 420px;
-    color: #fff;
-    z-index: 1;
-
-
-}
-.hero-logo {
-    display: block;
-    width: 350px;          
-    height: auto;
-    margin-bottom: 28px;   
-    opacity: 0.9;
-    margin-left: -45px;
-}
-.hero-image {
-    width: 50%;
-    height: 500px;
-    background-image: url("images/1.jpg");
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -270px;
+    width: 60%;
+    height: 100%;
+    background-image: url("images/9.jpg");
     background-size: cover;
-    background-position: center;
-    margin-right: -80px;
-    margin-left: auto;
+    background-position: center right;
+    opacity: 1;
+    z-index: 0;
 
+    /* 左侧边缘淡化 */
     -webkit-mask-image: linear-gradient(
         to left,
         black 0%,
         black 55%,
-        rgba(0,0,0,0.7) 65%,
-        rgba(0,0,0,0.4) 75%,
-        rgba(0,0,0,0.15) 85%,
+        rgba(0,0,0,0.6) 70%,
+        rgba(0,0,0,0.25) 85%,
         transparent 100%
     );
     mask-image: linear-gradient(
         to left,
         black 0%,
         black 55%,
-        rgba(0,0,0,0.7) 65%,
-        rgba(0,0,0,0.4) 75%,
-        rgba(0,0,0,0.15) 85%,
+        rgba(0,0,0,0.6) 70%,
+        rgba(0,0,0,0.25) 85%,
+        transparent 100%
+    );
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -180px;
+
+    width: 55%;
+    height: 100%;
+
+    background-image: url("images/1.jpg");
+    background-size: cover;
+    background-position: left center;
+
+    z-index: 0;
+
+    /* 右侧边缘淡化 */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        black 0%,
+        black 55%,
+        rgba(0,0,0,0.6) 70%,
+        rgba(0,0,0,0.25) 85%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        black 0%,
+        black 55%,
+        rgba(0,0,0,0.6) 70%,
+        rgba(0,0,0,0.25) 85%,
         transparent 100%
     );
 }
 
 
-.hero-text p {
+.hero-text {
+    max-width: 720px;
+    padding: 0 24px;
+    color: #f2f2f2;
+}
+
+.hero-logo {
+    width: 300px;
+    margin-bottom: 56px;
+    opacity: 0.85;
+}
+
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: 14px;
+    margin: 0 0 28px;
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 16px;
+    letter-spacing: 3px;
+    opacity: 0.7;
     margin: 0;
 }
-.hero-text p:not(.jp) {
-    margin-top: 28px;
-    margin-bottom: 6px;
-}
-.jp {
+
+.hero .jp {
+    margin-top: 12px;
     font-size: 13px;
-    letter-spacing: 1px;
-    opacity: 0.6;
-    margin-top: 4px;
-    margin-bottom: 0;
+    letter-spacing: 2px;
+    opacity: 0.8;
 }
+
 
 
 section > * {
@@ -155,7 +184,7 @@ section h2::after {
     display: block;
     width: 48px;
     height: 1px;
-    background-color: #bbb;
+    background-color: rgba(0,0,0,0.25);
     margin-top: 18px;
 }
 
@@ -199,7 +228,7 @@ section li {
 .section-works h2::after {
     content: " →";
     font-size: 16px;
-    opacity: 0.35;          /* 默认就能看到 */
+    opacity: 0.8;          /* 默认就能看到 */
     margin-left: 6px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -318,6 +347,28 @@ section:nth-of-type(4) { animation-delay: 0.4s; }
     }
 }
 
+.nav-link {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid #222;
+}
+
+section {
+    background-color:#f0f0f0;
+}
+section:nth-of-type(even) {
+    background-color:#e3e3e3;
+}
+
+
+
+
 }
 
 
@@ -332,7 +383,7 @@ section:nth-of-type(4) { animation-delay: 0.4s; }
 
 <header class="hero">
     <div class="hero-text">
-        <img src="images/3.png" class="hero-logo" alt="豊陽株式会社 Logo">
+        <img src="images/8.png" class="hero-logo" alt="豊陽株式会社 Logo">
 
         <h1>豊陽株式会社</h1>
         <p class="jp"></p>
@@ -358,20 +409,22 @@ section:nth-of-type(4) { animation-delay: 0.4s; }
 </a>
 
 
-<section>
+<a href="about.html" class="section-link">
+  <section class="section-works">
     <h2>私たちについて</h2>
-<p class="jp-sub">关于我们</p>
+    <p class="jp-sub">关于我们</p>
 
     <p>
-        私たちは、美術品や骨董品が持つ時間の重みと静かな美しさに、
-日々向き合いながら仕事を続けています。
-
-派手な言葉ではなく、誠実な眼差しで。
-作品と、その背景にある物語を大切にしながら、
-次の時代へと丁寧につないでいくことを心がけています。
-
+      私たちは、美術品や骨董品が持つ時間の重みと静かな美しさに、
+      日々向き合いながら仕事を続けています。
     </p>
-</section>
+
+    <p style="font-size:13px; opacity:0.5; margin-top:12px;">
+      点击查看公司介绍 →
+    </p>
+  </section>
+</a>
+
 
 
 
